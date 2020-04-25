@@ -22,7 +22,7 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 6px !important;
+    padding: 0 !important;
 }
 
 .topanswers-site:last-of-type {
