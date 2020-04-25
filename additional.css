@@ -3,6 +3,7 @@
     flex-direction: column;
     height: 100%;
 }
+
 .widget--body {
     flex-grow: 1;
 }
@@ -12,6 +13,23 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 main {
     flex-grow: 1;
+}
+
+.topanswers-site {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #d0d9dd;
+}
+
+.topanswers-site:last-of-type {
+    border-bottom: 0;
+}
+
+.topanswers-site a {
+    margin-left: 0.5em;
+    font-weight: bold;
 }
