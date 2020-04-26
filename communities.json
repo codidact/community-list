@@ -6,15 +6,15 @@
         "logo_url": "https://writing.codidact.com/assets/logo-writing.png"
     },
     {
-        "name": "Codidact Meta",
-        "canonical_url": "https://meta.codidact.com/",
-        "url_slug": "meta",
-        "logo_url": "https://meta.codidact.com/assets/meta-logo.png"
-    },
-    {
         "name": "The Great Outdoors",
         "canonical_url": "https://outdoors.codidact.com/",
         "url_slug": "outdoors",
         "logo_url": "https://outdoors.codidact.com/assets/outdoors.png"
+    },
+    {
+        "name": "Codidact Meta",
+        "canonical_url": "https://meta.codidact.com/",
+        "url_slug": "meta",
+        "logo_url": "https://meta.codidact.com/assets/meta-logo.png"
     }
 ]
