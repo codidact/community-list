@@ -7,23 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="https://unpkg.com/@codidact/co-design@0.5.0/dist/codidact.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="additional.css" />
+    <script type="application/javascript" src="topanswers.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container header--container">
-          <div class="header--brand">
-            <a class="header--site-name" href="/" style="display: flex"><img src="https://codidact.org/assets/img/logo-codidact.svg" alt="Codidact"></a>
-          </div>
-          <div class="header--menu">
-            <a class="header--item is-active" href="/">Communities</a>
+            <div class="header--brand">
+                <a class="header--site-name" href="/" style="display: flex"><img src="https://codidact.org/assets/img/logo-codidact.svg" alt="Codidact"></a>
+            </div>
+            <div class="header--menu">
+                <a class="header--item is-active" href="/">Communities</a>
 
-            <div class="header--separator"></div>
+                <div class="header--separator"></div>
 
-            <a class="header--item" href="https://codidact.org">Project homepage</a>
-          </div>
+                <a class="header--item" href="https://codidact.org">Project homepage</a>
+            </div>
         </div>
-      </header>
-      <main class="container has-padding-4">
+    </header>
+    <main class="container has-padding-4">
             <h1>Communities</h1>
             <p class="is-lead">Welcome to Codidact, the community-run, open-source Q&amp;A platform.</p>
             <p>These communities are hosted on Codidact currently:</p>
@@ -97,47 +98,12 @@
                 want to consider participating in the communities they have there:
             </p>
 
-            <div class="widget">
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=meta" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/meta">Meta</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=databases" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/databases">Databases</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=tex" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/tex">TeX</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=codegolf" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/codegolf">Code Golf</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=cplusplus" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/cplusplus">C++</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=csharp" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/csharp">C#</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=dotnet" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/dotnet">.NET</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=nix" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/nix">*nix</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=powershell" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/powershell">PowerShell</a>
-                </div>
-                <div class="widget--body topanswers-site">
-                    <img src="https://topanswers.xyz/communityicon?community=tex-mar-deva" height="32" width="32" alt />
-                    <a href="https://topanswers.xyz/tex-mar-deva">टेक्-मराठी</a>
-                </div>
+            <div class="widget js-topanswers-list">
+                <noscript class="notice is-danger widget--body">
+                    Couldn't load TopAnswers community list because you don't have JavaScript enabled.
+                    Please visit the <a href="https://topanswers.xyz/" target="_blank" rel="noopener noreferrer">TopAnswers homepage</a>
+                    to see the communities available there.
+                </noscript>
             </div>
     </main>
     <div class="footer is-inverted has-margin-top-8">
