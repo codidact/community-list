@@ -17,7 +17,7 @@ window.addEventListener('load', async () => {
     if (resp.status === 200) {
         const data = await resp.json();
         data.forEach(site => {
-            const template = `<div class="widget-body topanswers-site">
+            const template = `<div class="widget--body topanswers-site">
                 <img src="${site.logo_url}" height="32" width="32" alt />
                 <a href="${site.canonical_url}" target="_blank" rel="noopener noreferrer">${site.name}</a>
             </div>`;
