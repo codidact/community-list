@@ -32,11 +32,14 @@ window.addEventListener('load', async () => {
                 </div>`,
             ];
             const elements = htmlFromString(template[id]);
-            elements.forEach((el) =>
+            elements.forEach((el) => {
+                //add communities from json excluding 3 communities (already existing in html for JS disabled users)
                 id
-                    ? codidactList.appendChild(el)
-                    : topAnswersList.appendChild(el)
-            );
+                    ? !['meta', 'writing', 'outdoors'].includes(
+                          site.url_slug
+                      ) && codidactList.prepend(el)
+                    : topAnswersList.appendChild(el);
+            });
         });
     };
 
@@ -53,8 +56,7 @@ window.addEventListener('load', async () => {
 
     if (codidactRespond.status === 200) {
         const data = await codidactRespond.json();
-        //add communities from json excluding first three communities (already existing for JS disabled users)
-        updateList(data.slice(3), 1);
+        updateList(data, 1);
     }
 
     try {
