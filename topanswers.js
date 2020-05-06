@@ -6,6 +6,10 @@ window.addEventListener('load', async () => {
     };
 
     const updateList = (data, id) => {
+        let communityList = [
+            ...document.querySelectorAll('.community-list .widget'),
+        ].map((v) => v.getAttribute('name'));
+
         data.forEach((site) => {
             let template = [
                 `<div class="widget--body topanswers-site">
@@ -33,11 +37,9 @@ window.addEventListener('load', async () => {
             ];
             const elements = htmlFromString(template[id]);
             elements.forEach((el) => {
-                //add communities from json excluding 3 communities (already existing in html for JS disabled users)
                 id
-                    ? !['meta', 'writing', 'outdoors'].includes(
-                          site.url_slug
-                      ) && codidactList.prepend(el)
+                    ? !communityList.includes(site.url_slug) &&
+                      codidactList.prepend(el)
                     : topAnswersList.appendChild(el);
             });
         });
