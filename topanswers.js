@@ -8,7 +8,7 @@ window.addEventListener('load', async () => {
     const updateList = (data, id) => {
         let communityList = [
             ...document.querySelectorAll('.community-list .widget'),
-        ].map((v) => v.getAttribute('name'));
+        ].map((v) => v.getAttribute('data-name'));
 
         data.forEach((site) => {
             let template = [
