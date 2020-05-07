@@ -3,18 +3,21 @@
         "name": "Writing",
         "canonical_url": "https://writing.codidact.com/",
         "url_slug": "writing",
-        "logo_url": "https://writing.codidact.com/assets/logo-writing.png"
+        "logo_url": "https://writing.codidact.com/assets/logo-writing.png",
+        "description": "Our community for anybody interested in the craft of professional writing, editing, and publishing."
     },
     {
         "name": "The Great Outdoors",
         "canonical_url": "https://outdoors.codidact.com/",
         "url_slug": "outdoors",
-        "logo_url": "https://outdoors.codidact.com/assets/outdoors.png"
+        "logo_url": "https://outdoors.codidact.com/assets/outdoors.png",
+        "description": "Our site for anyone interested in the great outdoors and outdoor pursuits."
     },
     {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
-        "logo_url": "https://meta.codidact.com/assets/meta-logo.png"
+        "logo_url": "https://meta.codidact.com/assets/meta-logo.png",
+        "description": "Our meta site for issues regarding community and network governance."
     }
 ]
