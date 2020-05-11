@@ -14,6 +14,13 @@
         "description": "Our site for anyone interested in the great outdoors and outdoor pursuits."
     },
     {
+        "name": "Photography",
+        "canonical_url": "https://photography.codidact.com/",
+        "url_slug": "photography",
+        "logo_url": "https://photography.codidact.com/assets/logo-photo.png",
+        "description": "Our site for anyone interested in amateur, hobby, or professional photography, videography, and computer vision."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
