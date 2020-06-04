@@ -11,14 +11,21 @@
         "canonical_url": "https://outdoors.codidact.com/",
         "url_slug": "outdoors",
         "logo_url": "https://outdoors.codidact.com/assets/outdoors.png",
-        "description": "Our site for anyone interested in the great outdoors and outdoor pursuits."
+        "description": "Our community for anyone interested in the great outdoors and outdoor pursuits."
     },
     {
         "name": "Photography",
         "canonical_url": "https://photography.codidact.com/",
         "url_slug": "photography",
         "logo_url": "https://photography.codidact.com/assets/logo-photo.png",
-        "description": "Our site for anyone interested in amateur, hobby, or professional photography, videography, and computer vision."
+        "description": "Our community for anyone interested in amateur, hobby, or professional photography, videography, and computer vision."
+    },
+    {
+        "name": "Scientific Speculation",
+        "canonical_url": "https://scientific-speculation.codidact.com/",
+        "url_slug": "scientific-speculation",
+        "logo_url": "https://scientific-speculation.codidact.com/assets/specsci.png",
+        "description": "Our community for anyone interested in worldbuilding or other speculative developments that can be extrapolated from science."
     },
     {
         "name": "Codidact Meta",
