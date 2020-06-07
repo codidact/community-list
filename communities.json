@@ -28,6 +28,20 @@
         "description": "Our community for anyone interested in worldbuilding or other speculative developments that can be extrapolated from science."
     },
     {
+        "name": "Cooking",
+        "canonical_url": "https://cooking.codidact.com/",
+        "url_slug": "cooking",
+        "logo_url": "https://cooking.codidact.com/assets/cooking.png",
+        "description": "Our community for people interested in cooking and questions about it - methods, processes, recipes, tips, and recommendations."
+    },
+    {
+        "name": "Electrical Engineering",
+        "canonical_url": "https://electrical.codidact.com/",
+        "url_slug": "electrical",
+        "logo_url": "https://electrical.codidact.com/assets/electrical.png",
+        "description": "Our community for professionals, hobbyists, and students of electrical and electronic engineering."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
