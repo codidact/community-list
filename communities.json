@@ -45,7 +45,7 @@
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
-        "logo_url": "https://meta.codidact.com/assets/meta-logo.png",
+        "logo_url": "https://meta.codidact.com/assets/meta.png",
         "description": "Our meta site for issues regarding community and network governance."
     }
 ]
