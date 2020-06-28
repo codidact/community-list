@@ -42,6 +42,13 @@
         "description": "Our community for professionals, hobbyists, and students of electrical and electronic engineering."
     },
     {
+        "name": "Judaism",
+        "canonical_url": "https://judaism.codidact.com/",
+        "url_slug": "judaism",
+        "logo_url": "https://judaism.codidact.com/assets/judaism.png",
+        "description": "Our community for anyone practicing, studying, or interested in Judaism and Jewish life."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
