@@ -49,6 +49,13 @@
         "description": "Our community for anyone practicing, studying, or interested in Judaism and Jewish life."
     },
     {
+        "name": "Languages & Linguistics",
+        "canonical_url": "https://languages.codidact.com/",
+        "url_slug": "languages",
+        "logo_url": "https://languages.codidact.com/assets/languages.png",
+        "description": "Our community for anyone interested in specific (human) languages, language and its constructs more generally, or linguistics."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
