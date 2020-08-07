@@ -56,6 +56,13 @@
         "description": "Our community for anyone interested in specific (human) languages, language and its constructs more generally, or linguistics."
     },
     {
+        "name": "Software Development",
+        "canonical_url": "https://software.codidact.com/",
+        "url_slug": "software",
+        "logo_url": "https://software.codidact.com/assets/software-full.png",
+        "description": "Our community for people involved in software design, programming, testing, architecture, process or tools."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
