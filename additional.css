@@ -4,6 +4,10 @@
     height: 100%;
 }
 
+.widget--header p {
+    margin: 0;
+}
+
 .widget--body {
     flex-grow: 1;
 }
