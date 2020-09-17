@@ -3,70 +3,70 @@
         "name": "Writing",
         "canonical_url": "https://writing.codidact.com/",
         "url_slug": "writing",
-        "logo_url": "https://writing.codidact.com/assets/logo-writing.png",
+        "logo_url": "https://codidact.com/community-assets/writing/logo-large.png",
         "description": "Our community for anybody interested in the craft of professional writing, editing, and publishing."
     },
     {
         "name": "The Great Outdoors",
         "canonical_url": "https://outdoors.codidact.com/",
         "url_slug": "outdoors",
-        "logo_url": "https://outdoors.codidact.com/assets/outdoors.png",
+        "logo_url": "https://codidact.com/community-assets/outdoors/logo-large.png",
         "description": "Our community for anyone interested in the great outdoors and outdoor pursuits."
     },
     {
         "name": "Photography",
         "canonical_url": "https://photography.codidact.com/",
         "url_slug": "photography",
-        "logo_url": "https://photography.codidact.com/assets/logo-photo.png",
+        "logo_url": "https://codidact.com/community-assets/photography/logo-large.png",
         "description": "Our community for anyone interested in amateur, hobby, or professional photography, videography, and computer vision."
     },
     {
         "name": "Scientific Speculation",
         "canonical_url": "https://scientific-speculation.codidact.com/",
         "url_slug": "scientific-speculation",
-        "logo_url": "https://scientific-speculation.codidact.com/assets/specsci.png",
+        "logo_url": "https://codidact.com/community-assets/scientific-speculation/logo-large.png",
         "description": "Our community for anyone interested in worldbuilding or other speculative developments that can be extrapolated from science."
     },
     {
         "name": "Cooking",
         "canonical_url": "https://cooking.codidact.com/",
         "url_slug": "cooking",
-        "logo_url": "https://cooking.codidact.com/assets/cooking.png",
+        "logo_url": "https://codidact.com/community-assets/cooking/logo-large.png",
         "description": "Our community for people interested in cooking and questions about it - methods, processes, recipes, tips, and recommendations."
     },
     {
         "name": "Electrical Engineering",
         "canonical_url": "https://electrical.codidact.com/",
         "url_slug": "electrical",
-        "logo_url": "https://electrical.codidact.com/assets/electrical.png",
+        "logo_url": "https://codidact.com/community-assets/electrical/logo-large.png",
         "description": "Our community for professionals, hobbyists, and students of electrical and electronic engineering."
     },
     {
         "name": "Judaism",
         "canonical_url": "https://judaism.codidact.com/",
         "url_slug": "judaism",
-        "logo_url": "https://judaism.codidact.com/assets/judaism.png",
+        "logo_url": "https://codidact.com/community-assets/judaism/logo-large.png",
         "description": "Our community for anyone practicing, studying, or interested in Judaism and Jewish life."
     },
     {
         "name": "Languages & Linguistics",
         "canonical_url": "https://languages.codidact.com/",
         "url_slug": "languages",
-        "logo_url": "https://languages.codidact.com/assets/languages.png",
+        "logo_url": "https://codidact.com/community-assets/languages/logo-large.png",
         "description": "Our community for anyone interested in specific (human) languages, language and its constructs more generally, or linguistics."
     },
     {
         "name": "Software Development",
         "canonical_url": "https://software.codidact.com/",
         "url_slug": "software",
-        "logo_url": "https://software.codidact.com/assets/software-full.png",
+        "logo_url": "https://codidact.com/community-assets/software/logo-large.png",
         "description": "Our community for people involved in software design, programming, testing, architecture, process or tools."
     },
     {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
-        "logo_url": "https://meta.codidact.com/assets/meta.png",
+        "logo_url": "https://codidact.com/community-assets/meta/logo-large.png",
         "description": "Our meta site for issues regarding community and network governance."
     }
 ]
