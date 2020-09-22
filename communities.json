@@ -63,6 +63,13 @@
         "description": "Our community for people involved in software design, programming, testing, architecture, process or tools."
     },
     {
+        "name": "Mathematics",
+        "canonical_url": "https://math.codidact.com/",
+        "url_slug": "math",
+        "logo_url": "https://codidact.com/community-assets/math/logo-large.png",
+        "description": "Our community for people interested in theoretical and applied mathematics and statistics."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
