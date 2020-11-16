@@ -77,6 +77,13 @@
         "description": "Our community for any and all people interested in recreational coding."
     },
     {
+        "name": "Christianity",
+        "canonical_url": "https://christianity.codidact.com/",
+        "url_slug": "christianity",
+        "logo_url": "https://codidact.com/community-assets/christianity/logo-large.png",
+        "description": "Our community for anyone practicing, studying, or interested in Christianity and its sacred texts."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
