@@ -70,6 +70,13 @@
         "description": "Our community for people interested in theoretical and applied mathematics and statistics."
     },
     {
+        "name": "Code Golf",
+        "canonical_url": "https://codegolf.codidact.com/",
+        "url_slug": "codegolf",
+        "logo_url": "https://codidact.com/community-assets/codegolf/logo-large.png",
+        "description": "Our community for any and all people interested in recreational coding."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
