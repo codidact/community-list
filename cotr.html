@@ -50,10 +50,14 @@
 
         codidactyl_image = new Image();
         lollipop_image = new Image();
+        candy_image = new Image();
         codidactyl_image.onload = function () {
             lollipop_image.onload = function () {
-                document.body.addEventListener("keydown", jump_handler);
-                setTimeout(1, drawloop());
+                candy_image.onload = function () {
+                    document.body.addEventListener("keydown", jump_handler);
+                    setTimeout(drawloop, 1);
+                }
+                candy_image.src = 'candy.png'
             }
             lollipop_image.src = 'lollipop.png'
         }
@@ -114,24 +118,24 @@
 
                 relevant_lollipop = game_state.lollipops[0];
 
-                if (relevant_lollipop[1] > 60 && relevant_lollipop[1] < 90) {
+                if (relevant_lollipop[1] > 10 && relevant_lollipop[1] < 90) {
                     if (relevant_lollipop[0]) {
-                        if (200 - game_state.codidactyl_position >= 75 && 200 - game_state.codidactyl_position <= 125)
+                        if (200 - game_state.codidactyl_position >= 110 && 200 - game_state.codidactyl_position <= 185)
                             game_state.lost = true;
                     } else {
-                        if (200 - game_state.codidactyl_position >= 150 && 200 - game_state.codidactyl_position <= 200)
+                        if (200 - game_state.codidactyl_position >= 150)
                             game_state.lost = true;
                     }
                 }
             }
 
-            setTimeout(codidactylHandle(), 1);
-            setTimeout(lollipopHandle(), 2);
-            setTimeout(collisionHandle(), 3);
+            setTimeout(codidactylHandle, 1);
+            setTimeout(lollipopHandle, 2);
+            setTimeout(collisionHandle, 3);
         }
 
         function drawloop() {
-            setTimeout(drawloop, 50);
+            setTimeout(drawloop, 16);
 
             ctx.clearRect(0, 0, map.width, map.height);
 
@@ -152,10 +156,10 @@
             for (let pos = 0; pos < game_state.lollipops.length; pos++) {
                 const elpos = game_state.lollipops[pos];
 
-                if (!elpos[0]) // high?
+                if (!elpos[0]) // low?
                     ctx.drawImage(lollipop_image, elpos[1], 200, 50, 50)
-                else // low?
-                    ctx.drawImage(lollipop_image, elpos[1], 125, 50, 50)
+                else // high?
+                    ctx.drawImage(candy_image, elpos[1], 160, 50, 25)
             }
 
             ctx.font = "20px monospace";
@@ -185,7 +189,7 @@
                     };
                     mainloop()
                 } else if (game_state.codidactyl_direction == 0 && game_state.codidactyl_position == 0) {
-                    game_state.codidactyl_direction = 15
+                    game_state.codidactyl_direction = 16
                 }
             }
         }
