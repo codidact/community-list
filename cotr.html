@@ -48,6 +48,8 @@
             lollipops: []
         };
 
+        map.width = map.getBoundingClientRect().width;
+
         codidactyl_image = new Image();
         lollipop_image = new Image();
         candy_image = new Image();
@@ -55,6 +57,7 @@
             lollipop_image.onload = function () {
                 candy_image.onload = function () {
                     document.body.addEventListener("keydown", jump_handler);
+                    document.body.addEventListener("click", jump_handler);
                     setTimeout(drawloop, 1);
                 }
                 candy_image.src = 'candy.png'
@@ -140,9 +143,9 @@
             ctx.clearRect(0, 0, map.width, map.height);
 
             if (!game_state.started) {
-                ctx.font = "40px monospace";
+                ctx.font = (4*map.width/100) + "px monospace";
                 ctx.fillStyle = "rgba(0,0,0,0.8)";
-                ctx.fillText("Press Space to start", 250, 150)
+                ctx.fillText("Press Space to start", map.width/4, 150)
                 return;
             }
 
@@ -173,7 +176,7 @@
         }
 
         function jump_handler(e) {
-            if (e.code == "Space") {
+            if (typeof e.code == "undefined" || e.code == "Space") {
                 if (!game_state.started) {
                     setTimeout(function () { game_state.started = true; mainloop() }, 50);
                 } else if(game_state.lost) {
