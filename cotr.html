@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Codidact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://unpkg.com/@codidact/co-design@0.12.0/dist/codidact.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="additional.css" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+</head>
+
+<body>
+    <header class="header is-small has-background-color-tertiary-050">
+        <div class="container header--container">
+            <div class="header--brand">
+                <a class="header--site-name" href="./" style="display: flex"><img
+                        src="https://codidact.org/assets/img/logo-codidact.svg" alt="Codidact"></a>
+            </div>
+        </div>
+    </header>
+    <main class="container has-padding-4">
+        <h1>The Codidactyl Has Escaped!</h1>
+        <p class="is-lead">Oh. No. The Codidactyl has escaped. To prevent severe damage, you must guide it safely around
+            the sugar.</p>
+        <canvas id="map" width="1000" height="300" style="width: 100%; height: auto;"></canvas>
+    </main>
+
+    <script>
+
+        function loadImage(url) {
+            return new Promise(r => { let i = new Image(); i.onload = (() => r(i)); i.src = url; });
+        }
+
+        map = document.getElementById("map");
+        ctx = map.getContext('2d');
+
+        game_state = {
+            codidactyl_position: 0,
+            codidactyl_direction: 0,
+            speed: 20,
+            score: 0,
+            score_speed: 100,
+            started: false,
+            lost: false,
+            lollipops: []
+        };
+
+        map.width = map.getBoundingClientRect().width;
+
+        codidactyl_image = new Image();
+        lollipop_image = new Image();
+        candy_image = new Image();
+        codidactyl_image.onload = function () {
+            lollipop_image.onload = function () {
+                candy_image.onload = function () {
+                    document.body.addEventListener("keydown", jump_handler);
+                    document.body.addEventListener("click", jump_handler);
+                    setTimeout(drawloop, 1);
+                }
+                candy_image.src = 'candy.png'
+            }
+            lollipop_image.src = 'lollipop.png'
+        }
+        codidactyl_image.src = 'codidactyl.png'
+
+        async function mainloop() {
+            function codidactylHandle() {
+                if (game_state.lost) return;
+                setTimeout(codidactylHandle, game_state.speed);
+
+                game_state.score += game_state.speed / game_state.score_speed;
+                if(game_state.score > 2000) game_state.speed = 5
+                else if(game_state.score > 1500) game_state.speed = 10
+                else if(game_state.score > 500) game_state.speed = 15
+
+                game_state.codidactyl_position += game_state.codidactyl_direction;
+                if (game_state.codidactyl_position > 0) {
+                    game_state.codidactyl_direction--;
+                } else if (game_state.codidactyl_position == 0) {
+                    game_state.codidactyl_direction = 0;
+                }
+            }
+
+            async function lollipopHandle() {
+                if (game_state.lost) return;
+                setTimeout(lollipopHandle, game_state.speed);
+
+                lollipops = game_state.lollipops.map((k) => [k[0], k[1] - 5]);
+
+                recalc = lollipops.length == 0;
+                if (!recalc) {
+                    recalc = lollipops[lollipops.length - 1][1] < 700;
+                }
+
+                if (recalc) {
+                    threshold = 0.2;
+                    if (game_state.score > 500) threshold = 0.1
+                    if (game_state.score > 1500) threshold = 0.05
+
+                    if (Math.random() < threshold) {
+                        lollipops.push([(game_state.score > 250 && Math.random() < 0.2), 1050]);
+                    }
+                }
+
+                if (lollipops[0][1] < -50) {
+                    lollipops.shift();
+                }
+
+                game_state.lollipops = lollipops;
+            }
+            async function collisionHandle() {
+                if (game_state.lost) return;
+
+                setTimeout(collisionHandle, game_state.speed);
+
+                if (game_state.lollipops.length == 0)
+                    return;
+
+                relevant_lollipop = game_state.lollipops[0];
+
+                if (relevant_lollipop[1] > 10 && relevant_lollipop[1] < 90) {
+                    if (relevant_lollipop[0]) {
+                        if (200 - game_state.codidactyl_position >= 110 && 200 - game_state.codidactyl_position <= 185)
+                            game_state.lost = true;
+                    } else {
+                        if (200 - game_state.codidactyl_position >= 150)
+                            game_state.lost = true;
+                    }
+                }
+            }
+
+            setTimeout(codidactylHandle, 1);
+            setTimeout(lollipopHandle, 2);
+            setTimeout(collisionHandle, 3);
+        }
+
+        function drawloop() {
+            setTimeout(drawloop, 16);
+
+            ctx.clearRect(0, 0, map.width, map.height);
+
+            if (!game_state.started) {
+                ctx.font = (4*map.width/100) + "px monospace";
+                ctx.fillStyle = "rgba(0,0,0,0.8)";
+                ctx.fillText("Press Space to start", map.width/4, 150)
+                return;
+            }
+
+            ctx.beginPath();
+            ctx.moveTo(0, 250)
+            ctx.lineTo(1000, 250)
+            ctx.stroke()
+
+            ctx.drawImage(codidactyl_image, 50, 200 - game_state.codidactyl_position, 50, 50)
+
+            for (let pos = 0; pos < game_state.lollipops.length; pos++) {
+                const elpos = game_state.lollipops[pos];
+
+                if (!elpos[0]) // low?
+                    ctx.drawImage(lollipop_image, elpos[1], 200, 50, 50)
+                else // high?
+                    ctx.drawImage(candy_image, elpos[1], 160, 50, 25)
+            }
+
+            ctx.font = "20px monospace";
+            ctx.fillStyle = "rgba(0,0,0,0.5)";
+            if (game_state.lost) {
+                ctx.fillText("You lost. Final Score: " + Math.floor(game_state.score), 0, 20)
+                ctx.fillText("Press Space to restart ", 0, 50)
+            } else {
+                ctx.fillText("Score: " + Math.floor(game_state.score), 0, 20)
+            }
+        }
+
+        function jump_handler(e) {
+            if (typeof e.code == "undefined" || e.code == "Space") {
+                if (!game_state.started) {
+                    setTimeout(function () { game_state.started = true; mainloop() }, 50);
+                } else if(game_state.lost) {
+                    game_state = {
+                        codidactyl_position: 0,
+                        codidactyl_direction: 0,
+                        speed: 20,
+                        score: 0,
+                        score_speed: 100,
+                        started: true,
+                        lost: false,
+                        lollipops: []
+                    };
+                    mainloop()
+                } else if (game_state.codidactyl_direction == 0 && game_state.codidactyl_position == 0) {
+                    game_state.codidactyl_direction = 16
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
