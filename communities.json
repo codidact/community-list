@@ -98,6 +98,20 @@
         "description": "Our community for anyone interested in physics of any type and at any level."
     },
     {
+        "name": "Linux Systems",
+        "canonical_url": "https://linux.codidact.com/",
+        "url_slug": "linux",
+        "logo_url": "https://codidact.com/community-assets/linux/logo-large.png",
+        "description": "Our community for users of Linux and Unix-like operating systems."
+    },
+    {
+        "name": "Power Users",
+        "canonical_url": "https://powerusers.codidact.com/",
+        "url_slug": "powerusers",
+        "logo_url": "https://codidact.com/community-assets/powerusers/logo-large.png",
+        "description": "Our community for computer enthusiasts (power users) asking and answering questions about software and hardware usage."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
