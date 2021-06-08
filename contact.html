@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Codidact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://unpkg.com/@codidact/co-design@0.12.3/dist/codidact.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="additional.css" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <script type="application/javascript" src="topanswers.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header--container">
+            <div class="header--brand">
+                <a class="header--site-name" href="./" style="display: flex"><img src="https://codidact.org/assets/img/logo-codidact.svg" alt="Codidact"></a>
+            </div>
+            <div class="header--menu">
+                <a class="header--item" href="/">Communities</a>
+                <a class="header--item is-active" href="/contact">Contact</a>
+
+                <div class="header--separator"></div>
+
+                <a class="header--item" href="https://codidact.org">Project homepage</a>
+            </div>
+        </div>
+    </header>
+    <main class="container has-padding-4">
+        <div class="grid">
+            <div class="grid--cell is-1"></div>
+            <div class="grid--cell is-10">
+                <h1>Contact Us</h1>
+                <p>
+                    Need to get in touch? There's a few ways you can contact us, depending on what you need.
+                </p>
+
+                <h2 class="has-color-red-500">Security</h2>
+                <p>
+                    <strong class="has-color-red-500">
+                        Please don't report security vulnerabilities publicly, including on Meta.
+                    </strong>
+                    If you believe you've found a security issue, please use our 
+                    <a href="https://codidact.atlassian.net/servicedesk/customer/portal/1">support portal</a> and use
+                    the Security request type, or email us at
+                    <a href="mailto:support@codidact.org">support@codidact.org</a>, mentioning SECURITY in the subject
+                    line.
+                </p>
+        
+                <h2>Meta</h2>
+                <p>
+                    If you're asking about how our sites or the organisation operates, or if you've got a feature request or a
+                    bug report, <a href="https://meta.codidact.com/">Meta</a> is the place to do that. Post there with the
+                    details, and either the community will be able to answer or our staff can get back to you.
+                </p>
+        
+                <h2>Support</h2>
+                <p>
+                    If you need to get in touch for support with your Codidact account or something else, use our
+                    <a href="https://codidact.atlassian.net/servicedesk/customer/portal/1">support portal</a>, or email
+                    us at <a href="mailto:support@codidact.org">support@codidact.org</a>.
+                </p>
+
+                <h2>Enquiries</h2>
+                <p>
+                    For all other enquiries, please email <a href="mailto:info@codidact.org">info@codidact.org</a>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Matomo -->
+    <script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="./community-assets//analytics.codidact.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '3']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <noscript><p><img src="//analytics.codidact.org/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Matomo Code -->
+</body>
+</html>
