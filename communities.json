@@ -112,6 +112,13 @@
         "description": "Our community for computer enthusiasts (power users) asking and answering questions about software and hardware usage."
     },
     {
+        "name": "Tabletop Role-Playing Games",
+        "canonical_url": "https://rpg.codidact.com/",
+        "url_slug": "rpg",
+        "logo_url": "https://codidact.com/community-assets/rpg/logo-large.png",
+        "description": "Our community for people who play, run, develop, or are interested in human-mediated role-playing games of all genres."
+    },
+    {
         "name": "Codidact Meta",
         "canonical_url": "https://meta.codidact.com/",
         "url_slug": "meta",
