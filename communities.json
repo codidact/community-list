@@ -124,5 +124,12 @@
         "url_slug": "meta",
         "logo_url": "https://codidact.com/community-assets/meta/logo-large.png",
         "description": "Our meta site for issues regarding community and network governance."
+    },
+    {
+        "name": "Community Proposals",
+        "canonical_url": "https://proposals.codidact.com/",
+        "url_slug": "proposals",
+        "logo_url": "https://codidact.com/community-assets/proposals/logo-large.png",
+        "description": "Our staging ground for new communities.  Ask and answer questions for current proposals or bring new proposals here."
     }
 ]
